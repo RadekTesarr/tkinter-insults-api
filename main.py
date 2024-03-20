@@ -16,3 +16,6 @@ drop_down_lang_options.pack()
 response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
 response.raise_for_status()
 data = response.json()
+
+# Mainloop
+root.mainloop()
