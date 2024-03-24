@@ -31,7 +31,7 @@ insult_button = Button(text="Chci urazit", command=insult_me)
 insult_button.pack()
 
 # Label
-insult_label = Label()
+insult_label = Label(wraplength=250)
 insult_label.pack()
 
 # Mainloop
