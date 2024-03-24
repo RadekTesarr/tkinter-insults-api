@@ -7,6 +7,18 @@ root.minsize(300, 300)
 root.resizable(False, False)
 root.title("Aplikace na urážky")
 
+# Functions
+def insult_me():
+    user_language = drop_down_lang.get()
+    param = {
+        "lang": user_language,
+        "type": "json"
+    }
+
+    response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
+    response.raise_for_status()
+    data = response.json()
+
 # Roller shutter - language
 drop_down_lang = StringVar(root)
 drop_down_lang.set("cs")
@@ -20,10 +32,6 @@ insult_button.pack()
 # Label
 insult_label = Label()
 insult_label.pack()
-
-response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
-response.raise_for_status()
-data = response.json()
 
 # Mainloop
 root.mainloop()
