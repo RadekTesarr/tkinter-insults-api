@@ -27,7 +27,7 @@ drop_down_lang_options = OptionMenu(root, drop_down_lang, "cs", "en", "pl", "es"
 drop_down_lang_options.pack()
 
 # Button
-insult_button = Button(text="Chci urazit")
+insult_button = Button(text="Chci urazit", command=insult_me)
 insult_button.pack()
 
 # Label
