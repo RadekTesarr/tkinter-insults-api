@@ -10,8 +10,12 @@ root.title("Aplikace na urážky")
 # Roller shutter - language
 drop_down_lang = StringVar(root)
 drop_down_lang.set("cs")
-drop_down_lang_options = OptionMenu(root, drop_down_lang, "en", "cs", "pl", "es", "fr")
+drop_down_lang_options = OptionMenu(root, drop_down_lang, "cs", "en", "pl", "es", "fr")
 drop_down_lang_options.pack()
+
+# Button
+insult_button = Button(text="Chci urazit")
+insult_button.pack()
 
 response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
 response.raise_for_status()
