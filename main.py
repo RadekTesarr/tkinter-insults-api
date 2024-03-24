@@ -15,7 +15,7 @@ def insult_me():
         "type": "json"
     }
 
-    response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
+    response = requests.get("https://evilinsult.com/generate_insult.php", params=param)
     response.raise_for_status()
     data = response.json()
     insult_label.config(text=data["insult"])
