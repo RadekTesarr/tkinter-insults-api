@@ -17,6 +17,10 @@ drop_down_lang_options.pack()
 insult_button = Button(text="Chci urazit")
 insult_button.pack()
 
+# Label
+insult_label = Label()
+insult_label.pack()
+
 response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
 response.raise_for_status()
 data = response.json()
